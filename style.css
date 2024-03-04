@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+ background-image: url(./assets/bg.jpg);
+ background-position: top center;
+ background-size: 100% auto;
+ background-repeat: no-repeat;
+ background-color: #121214;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+}
+
+header{
+    margin-top: 32px;
+    height: 120px;
+}
+
+header div{
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+    transition: transform 0.3s;
+}
+
+header div img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+header div:hover{
+    transform: scale(1.1);
+}
+
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    margin-top: 32px;
+}
+
+section {
+    color: white;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+section div{ 
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+section h2 {
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: -0,47px;
+}
+
+section p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: -0.18px;
+    color: #A1A1AA;
+}
+
+section ul {
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+section ul li {
+    transition: transform 0.3s;
+}
+
+section ul li:hover {
+    transform: scale(1.1);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
+
+.games-lista img{
+    border-radius: 8px;
+    width: 90px;
+ }
+
+ .canais-lista img {
+    border-radius: 50%;
+    width: 70px;
+    border: 1px solid #443E54;
+ }
+
+/* animaçao */
+
+header div {
+    animation: fromTop .8s .4s backwards;
+}
+
+main section {
+    animation: fromBottom .8s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: 0;
+}
+
+main section:nth-child(2) {
+    animation-delay: .4s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .8s;
+}
+
+@keyframes fromTop {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
