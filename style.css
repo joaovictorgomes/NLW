@@ -35,6 +35,7 @@ header div{
 header div img{
     width: 100%;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 header div:hover{
@@ -154,4 +155,78 @@ main section:nth-child(3) {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@keyframes modal {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container.mostrar {
+    display: flex;
+}
+
+
+.modal-border-gradient {
+    background: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 14px; 
+    padding: 4px;
+}
+
+.modal {
+    background: white;
+    width: 60%;
+    min-width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+.modal-container {
+    display: none; 
+}
+
+.modal-container {
+    display: none;
+    animation: modal 1s
+}
+.mostrar {
+    display: flex;
+}
+
+.fechar {
+    position: absolute;
+    font-size: 0.7em;
+    top: -12px;
+    right: -12px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid rgb(202, 216, 5);
+    background: white;
+    color: black;
+    font-family: 'inter', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
 }
