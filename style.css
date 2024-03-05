@@ -133,6 +133,8 @@ main section:nth-child(3) {
     animation-delay: .8s;
 }
 
+/* Animation */
+
 @keyframes fromTop {
     from {
         transform: translateY(-30px);
@@ -168,6 +170,8 @@ main section:nth-child(3) {
         transform: translateY(0);
     }
 }
+
+/* Modal */
 
 .modal-container {
     width: 100vw;
